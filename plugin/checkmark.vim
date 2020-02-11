@@ -28,7 +28,20 @@ function! s:checkbox_toggle()
     elseif getline(".") =~ "\\[x\\]"
         silent!s/\[x\]/\[ \]/
     endif
+    silent!/aksjdasd
 endfunction
+
+function! s:checkbox_rotate()
+    if getline(".") !~ "\[[x ]\]"
+        silent!s/\(\s*\%(-\|[0-9]\+.\)\s\+\)\([^[].*$\)/\1[ ] \2
+    elseif getline(".") =~ "\\[ \\]"
+        silent!s/\[ \]/\[x\]/
+    elseif getline(".") =~ "\\[x\\]"
+      silent!s/\[[x ]\] //
+    endif
+    silent!/aksjdasd
+endfunction
+
 function! s:checkbox_delete()
     silent!s/\[[x ]\] //
     silent!/aksjdasd
