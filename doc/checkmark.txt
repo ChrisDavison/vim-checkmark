@@ -6,35 +6,37 @@ License: Same terms as Vim itself (see |license|)
 INTRODUCTION                                    *checkmark*
 
 
-A simple utility to toggle, uncheck, or remove checkboxes from markdown documents.
+A simple utility to toggle, Untick, or remove checkboxes from markdown documents.
 
 
 MAPS                                            *checkmark-maps*
 
-                                                *checkmark-<leader>-x*
-                                                *checkmark-v-<leader>-x*
-{visual}<leader-x>                   
-<leader>-x             Toggle checkbox on current line, or visual selection
+                                                *checkmark-<leader>x*
+                                                *checkmark-v-<leader>x*
+{visual}<leader>x                   
+<leader>x
+    Toggle checkbox on current line, or visual selection
 
 
-                                                *checkmark-<leader>-X*
-                                                *checkmark-v-<leader>-X*
-{visual}<leader-X>                   
-<leader>-X             Remove checkbox on current line, or visual selection
+                                                *checkmark-<leader>X*
+                                                *checkmark-v-<leader>X*
+{visual}<leader>X                   
+<leader>X           
+    Remove checkbox on current line, or visual selection
 
 
 COMMANDS                                          *checkmark-commands*
 
-:CheckToggle           Toggle between empty, and ticked checkbox (on line, 
-                       range, or visual). If no checkbox exists, will add an 
-                       empty checkbox.
+:[range]Tick                                      *:Tick*
 
-:CheckRotate           Rotate between NO checkbox, empty, and ticked checkbox 
-                       (on line, range, or visual)
+    Toggle between empty, and ticked checkbox (on line, range, or visual). 
+    If no checkbox exists, will add an empty checkbox.
 
-:Uncheck               Remove checkboxes from the current line, range, or 
-                       visual selection
+:[range]Untick                                    *:Untick*
+    
+    Remove checkboxes from the current line, range, or visual selection.
 
-:RMCHeck               Remove checkboxes from the entire document
+:RMCheck                                          *:RMCheck*          
 
+    Remove checkboxes from the entire document
 
