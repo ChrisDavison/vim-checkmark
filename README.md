@@ -13,11 +13,8 @@ CheckRotate
     Rotate between NO checkbox, empty, and ticked checkbox (on line, range, 
     or visual)
 
-Uncheck
-    Remove checkboxes from the current line, range, or visual selection
-
 RMCHeck
-    Remove checkboxes from the entire document
+    Remove checkboxes from the entire document, or selected lines.
 ```
 
 and mappings (which can be disabled by adding `let g:checkmark_no_mapping=1` to your `.vimrc`):
@@ -25,6 +22,6 @@ and mappings (which can be disabled by adding `let g:checkmark_no_mapping=1` to 
 ```vim
 nnoremap <leader>x :CheckToggle<CR>
 vnoremap <leader>x :'<,'>CheckToggle<CR>
-nnoremap <leader>X :Uncheck<CR>
-vnoremap <leader>X :'<,'>Uncheck<CR>
+nnoremap <leader>X :RMCheck<CR>
+vnoremap <leader>X :'<,'>RMCheck<CR>
 ```

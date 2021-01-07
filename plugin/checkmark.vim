@@ -14,7 +14,7 @@ set cpo&vim
 " Command bindings {{{1
 command! -range Tick <line1>,<line2>call checkmark#checkbox_tick()
 command! -range Untick <line1>,<line2>call checkmark#checkbox_untick()
-command! -range RMCheck %call checkmark#checkbox_remove()
+command! -range=% RMCheck <line1>,<line2>call checkmark#checkbox_remove()
 
 " OPTIONAL default bindings {{{1
 if !exists("g:checkmark_no_mappings") || !g:checkmark_no_mappings
