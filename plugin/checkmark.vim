@@ -13,6 +13,7 @@ set cpo&vim
 
 " Command bindings {{{1
 command! -range Tick <line1>,<line2>call checkmark#checkbox_tick()
+command! -range RTick <line1>,<line2>call checkmark#checkbox_rotate()
 command! -range Untick <line1>,<line2>call checkmark#checkbox_untick()
 command! -range=% RMCheck <line1>,<line2>call checkmark#checkbox_remove()
 
